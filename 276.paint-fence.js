@@ -12,4 +12,5 @@ var numWays = function (n, k) {
     memo[i] = total_way(i - 1) * (k - 1) + total_way(i - 2) * (k - 1);
     return memo[i];
   };
+  return total_way(n);
 };
