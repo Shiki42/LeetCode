@@ -20,7 +20,7 @@ class Solution(object):
                 if left == -1 or right == -1 or abs(left-right) > 1:
                     return -1
                 else:
-                    return depth
+                    return max(left,right)
         if not root:
             return True
         return dfs(root,0) != -1
