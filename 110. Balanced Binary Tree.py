@@ -16,11 +16,8 @@ class Solution(object):
             else:
                 left = dfs(root.left,depth+1)
                 right = dfs(root.right,depth+1)
-                print(left,right)
                 if left == -1 or right == -1 or abs(left-right) > 1:
                     return -1
-                else:
-                    return max(left,right)
-        if not root:
-            return True
+                return max(left,right)
+
         return dfs(root,0) != -1
