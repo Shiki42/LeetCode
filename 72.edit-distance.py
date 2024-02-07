@@ -25,3 +25,4 @@ class Solution:
                 replace = 1 + self.minDistance2(word1, word2, i + 1, j + 1, memo)
                 ans = min(insert, delete, replace)
             memo[(i, j)] = ans
+            #print(memo)
