@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Date Display Functions</title>
+</head>
+<body>
+    <div id="ct1"></div>
+    <div id="ct2"></div>
+    <div id="ct3"></div>
+    <div id="ct4"></div>
+
+    <script>
+        function display_c() {
+    clearInterval(tt); // Clear any existing interval
+
+    // Set up an interval to update the displayed time periodically
+    tt = setInterval(display_ct2, 1000);
+    }
+        function display_ct1() {
+            var x = new Date().toLocaleString("en-US", {timeZone: "America/Sao_Paulo"});
+            var x1 = x.getMonth() + 1 + "/" + x.getDate() + "/" + x.getYear();
+            x1 = x + " - " + x.getHours() + ":" + x.getMinutes() + ":" + x.getSeconds();
+            document.getElementById('ct1').innerHTML = x1;
+            tt = display_c();
+        }
+
+        function display_ct2() {
+            var x = new Date().toLocaleString("en-US", {timeZone: "America/Sao_Paulo"});
+            var x1 = x.getMonth() + 1 + "/" + x.getDate() + "/" + x.getYear();
+            x1 = x1 + " - " + x.getHours() + ":" + x.getMinutes() + ":" + x.getSeconds();
+            document.getElementById('ct2').innerHTML = x1;
+            tt = display_c();
+        }
+
+        function display_ct3() {
+            var x = new Date().toLocaleString("en-US", {timeZone: "America/Sao_Paulo"});
+            var x1 = x.getMonth() + 1 + "/" + x.getDate() + "/" + x.getYear();
+            x1 = x1 + " - " + x.getHours() + ":" + x.getMinutes() + ":" + x.getSeconds();
+            document.getElementById('ct3').innerHTML = x1;
+            tt = display_c();
+        }
+
+        function display_ct4() {
+            var x = new Date("en-US", {timeZone: "Europe/Budapest"});
+            var x1 = x.getMonth() + 1 + "/" + x.getDate() + "/" + x.getYear();
+            x1 = x1 + " - " + x.getHours() + ":" + x.getMinutes() + ":" + x.getSeconds();
+            document.getElementById('ct4').innerHTML = x1;
+            tt = display_c();
+        }
+
+        // Call each function to test
+        display_ct1();
+        display_ct2();
+        display_ct3();
+        display_ct4();
+
+    </script>
+</body>
+</html>
