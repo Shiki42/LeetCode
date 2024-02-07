@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<body>
+    <h1>Test</h1>
+    <div id="rules">
+        <!-- 在此添加规则元素 -->
+        <div class="rule">
+            <span>Span 1</span>
+            <select>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+            </select>
+            <span>Span 2</span>
+            <input type="text" value="Input">
+        </div>
+    </div>
+
+    <!-- 添加按钮 -->
+    <button id="addRuleBtn">Add Rule</button>
+
+    <!-- 引用 JavaScript 文件 -->
+<!--     <script src="script.js"></script> -->
+    <script>
+        
+        window.copier = window.copier || {};
+        (function () {
+            console.log('ssss')
+            window.copier.init = function() {
+                console.log('Initializing copier');
+                window.addRule = function() {
+                    var rulesDiv = document.getElementById('rules');
+                    var lastRule = rulesDiv.lastElementChild.cloneNode(true);
+                    rulesDiv.appendChild(lastRule);
+                }
+
+                // 获取按钮元素
+                var addRuleBtn = document.getElementById('addRuleBtn');
+                console.log('222')
+                // 当按钮被点击时调用 addRule 函数
+                addRuleBtn.addEventListener('click', window.addRule);
+            }
+        })();
+        window.copier.init();
+    </script>
+</body>
+</html>
