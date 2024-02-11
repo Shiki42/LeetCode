@@ -29,7 +29,6 @@
         
         window.copier = window.copier || {};
         (function () {
-            console.log('ssss')
             window.copier.init = function() {
                 console.log('Initializing copier');
                 window.addRule = function() {
@@ -38,10 +37,8 @@
                     rulesDiv.appendChild(lastRule);
                 }
 
-                // 获取按钮元素
                 var addRuleBtn = document.getElementById('addRuleBtn');
-                console.log('222')
-                // 当按钮被点击时调用 addRule 函数
+
                 addRuleBtn.addEventListener('click', window.addRule);
             }
         })();
