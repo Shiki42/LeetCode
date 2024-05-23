@@ -2,15 +2,104 @@
     width: 640px;
     margin: 0 auto;
     text-align: justify;
-    background-color: blue;
+    background-color: grey;
 }
 
+.header{
+    width: 640px;
+    margin: 0 auto;
+    text-align: justify;
+
+}
 .tile {
-    width: 180px;
-    margin: 0 10px;
-    background-color: red;
+    /* width: 180px;
+    margin: 0 10px; */
+    /* width: 200px;
+    margin: 0; */
+    width: 0px;
+    margin: 0 40px;
+    /* width: 160px;
+    margin: 0 20px; */
+    background-color: white;
     display: inline-block;
     text-align: center;
+
+}
+.tile2 {
+    /* width: 180px;
+    margin: 0 10px; */
+    width: 200px;
+    margin: 0;
+    /* width: 0px;
+    margin: 0 40px; */
+    /* width: 160px;
+    margin: 0 20px; */
+    background-color: white;
+    display: inline-block;
+    text-align: center;
+
+}
+.tile3 {
+    width: 180px;
+    margin: 0 10px;
+    /* width: 200px;
+    margin: 0; */
+    /* width: 0px;
+    margin: 0 40px; */
+    /* width: 160px;
+    margin: 0 20px; */
+    background-color: white;
+    display: inline-block;
+    text-align: center;
+
+}
+.tile4 {
+    /* width: 180px;
+    margin: 0 10px; */
+    /* width: 200px;
+    margin: 0; */
+    /* width: 0px;
+    margin: 0 40px; */
+    width: 160px;
+    margin: 0 20px;
+    background-color: white;
+    display: inline-block;
+    text-align: center;
+
+}
+.grid-container{
+    width: 640px;
+    margin: 0 auto;
+    background-color: green;
+
+    /* display: flex; justify-content: space-around;  */
+
+    /* display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; */
+
+    /* display: flex; justify-content: space-between; */
+
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+}
+
+.tile-2 {
+    /* width: 180px;
+    margin: 0 10px; */
+    /* width: 200px;
+    margin: 0; */
+    /* width: 0px;
+    margin: 0 40px; */
+    /* height: 100px;
+    background-color: red;
+    text-align: center;
+    line-height: 100px; */
+
+    /* flex: 1; */
+
+    /* width: 180px; */
+
+    /* flex: 0 0 180px; */
+/* 
+    width: 200px; margin: 0 auto; */
 }
 
 .container::after {
