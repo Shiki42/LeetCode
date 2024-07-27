@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { createRoot } from 'react-dom/client';
 
-const style = {
+const style: React.CSSProperties = {
   table: {
     borderCollapse: 'collapse'
-  },
+  } as React.CSSProperties,
   tableCell: {
     border: '1px solid gray',
     margin: 0,
