@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { createRoot } from 'react-dom/client';
 
-const style: React.CSSProperties = {
+const style = {
   table: {
     borderCollapse: 'collapse'
   } as React.CSSProperties,
