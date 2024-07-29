@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 import './App.css'
 import Toast from './toast'
+import MyToast from './my-toast';
 import Styled_button from './styled_component';
 const App: React.FC = () => {
   const [toastOpen, setToastOpen] = useState(false);
@@ -17,6 +18,9 @@ const App: React.FC = () => {
         status="success"
       />
       <Styled_button />
+      <MyToast open={toastOpen}
+      onclose={() => setToastOpen(false)}
+      />
     </div>
   );
 };
