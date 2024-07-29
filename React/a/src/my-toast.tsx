@@ -1,11 +1,11 @@
 import react, {useState, useEffect} from "react";
 
-interface ToastProps = {
+interface ToastProps {
     open: boolean;
 }
 
-export default function MyToast({open}) { 
-    if (!open) return null;
+const Toast: React.FC<ToastProps> = (props) => { 
+    if (!props.open) return null;
     return (
         <div>
             <p>Toast</p>
@@ -13,3 +13,5 @@ export default function MyToast({open}) {
     )
 
 }
+
+export default Toast;
