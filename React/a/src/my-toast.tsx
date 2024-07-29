@@ -1,9 +1,22 @@
 import react, {useState, useEffect} from "react";
 
+import styled from "styled-components";
+
+
 interface ToastProps {
     open: boolean;
     onclose: () => void;
 }
+
+const ToastWrapper = styled.div`
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    padding: 1rem;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+`
 
 const Toast: React.FC<ToastProps> = (props) => { 
     useEffect(() => {
@@ -18,9 +31,9 @@ const Toast: React.FC<ToastProps> = (props) => {
     if (!props.open) return null;
 
     return (
-        <div>
+        <ToastWrapper>
             <p>Toast</p>
-        </div>
+        </ToastWrapper>
     )
 
 }
