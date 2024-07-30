@@ -24,23 +24,23 @@ function promiseAll(iterable) {
       });
     });
   }
-promise1 = new Promise((resolve, reject) => {
+let promise1 = new Promise((resolve, reject) => {
     setTimeout(() => {
         resolve('promise1');
     }, 3000);
 });
-promise2 = new Promise((resolve, reject) => {
+let promise2 = new Promise((resolve, reject) => {
     setTimeout(() => {
         resolve('promise2');
     }, 3000);
 });
-promise3 = new Promise((resolve, reject) => {
+let promise3 = new Promise((resolve, reject) => {
     setTimeout(() => {
         resolve('promise3');
     }, 3000);
 });
 
-test_data = [promise1, promise2, promise3]
+let test_data = [promise1, promise2, promise3]
 
 promiseAll(test_data).then((values) => {
     console.log(values);
